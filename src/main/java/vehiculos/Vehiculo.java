@@ -115,19 +115,19 @@ public class Vehiculo {
     }
     
     //metodos
-    
-    public static Vehiculo fabricaMayorVentas() {
-        Vehiculo fabMventas = listado.get(7);
-        for (Vehiculo p : listado) {
-            if (p.getCantidadVehiculos()>fabMventas.getCantidadVehiculos()){
-                fabMventas=p;
+    public static Fabricante fabricaMayorVentas() {
+        Vehiculo fabMventas = listado.get(7);//no se que numero va en el get(?)
+        for (Vehiculo v : listado) {
+            if ( v.getCantidadVehiculos() > fabMventas.getCantidadVehiculos()){
+                fabMventas = v;
             }
-        }return fabMventas;
+        //Fabricante fabrica = fabMventas.getFabricante();
+        }return fabMventas.getFabricante();
     }
 
     public static Pais paisMasVendedor() {
-	Vehiculo fabM_ventas = fabricaMayorVentas();
-	return fabM_ventas.getFabricante().getPais();
+	Fabricante fmv = fabricaMayorVentas();
+	return fmv.getPais();
 	}       
      
 }
