@@ -10,9 +10,10 @@ import java.util.ArrayList;
  */
 public class Vehiculo {
     private String placa;
-    private int puertas,velocidadMaxima;
+    private int puertas;
+    private double velocidadMaxima;
     private String nombre;
-    private int precio,peso;
+    private double precio,peso;
     private String traccion;
     private Fabricante fabricante;
     private int CantidadVehiculos; 
@@ -20,7 +21,7 @@ public class Vehiculo {
      
      //constructor
 
-    public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, String traccion, Fabricante fabricante) {
+    public Vehiculo(String placa, int puertas, double velocidadMaxima, String nombre, double precio, double peso, String traccion, Fabricante fabricante) {
         this.placa = placa;
         this.puertas = puertas;
         this.velocidadMaxima = velocidadMaxima;
@@ -49,11 +50,11 @@ public class Vehiculo {
         this.puertas = puertas;
     }
 
-    public int getVelocidadMaxima() {
+    public double getVelocidadMaxima() {
         return velocidadMaxima;
     }
 
-    public void setVelocidadMaxima(int velocidadMaxima) {
+    public void setVelocidadMaxima(double velocidadMaxima) {
         this.velocidadMaxima = velocidadMaxima;
     }
 
@@ -65,19 +66,19 @@ public class Vehiculo {
         this.nombre = nombre;
     }
 
-    public int getPrecio() {
+    public double getPrecio() {
         return precio;
     }
 
-    public void setPrecio(int precio) {
+    public void setPrecio(double precio) {
         this.precio = precio;
     }
 
-    public int getPeso() {
+    public double getPeso() {
         return peso;
     }
 
-    public void setPeso(int peso) {
+    public void setPeso(double peso) {
         this.peso = peso;
     }
 

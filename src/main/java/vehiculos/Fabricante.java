@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package vehiculos;
-import java.util.ArrayList;
+
 
 /**
  *
@@ -12,7 +12,6 @@ import java.util.ArrayList;
 public class Fabricante {
     private String nombre;
     private Pais pais;
-    public static ArrayList<Fabricante> listado = new ArrayList<Fabricante>();
     
     //constructor
 
@@ -38,8 +37,5 @@ public class Fabricante {
     public void setPais(Pais pais) {
         this.pais = pais;
     }
-    
-    public static void agregarFabricante(Fabricante fabricante) {
-		listado.add(fabricante);
-	}
+
 }
