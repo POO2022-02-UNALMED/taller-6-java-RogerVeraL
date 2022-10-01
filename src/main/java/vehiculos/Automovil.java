@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package vehiculos;
-import java.util.ArrayList;
 
 /**
  *
@@ -12,14 +11,12 @@ import java.util.ArrayList;
 public class Automovil extends Vehiculo{
     private int puestos;
     private static int autos;
-    private static ArrayList<Automovil> listado = new ArrayList<Automovil>();
     
     //constructor
-    public Automovil(String placa, String nombre, int precio, int peso, Fabricante fabricante, int CantidadVehiculos,int puestos) {
-        super(placa, 4, 100, nombre, precio, peso, "FWD", fabricante, CantidadVehiculos);
+    public Automovil(String placa, String nombre, int precio, int peso, Fabricante fabricante,int puestos) {
+        super(placa, 4, 100, nombre, precio, peso, "FWD", fabricante);
         this.puestos = puestos;
         autos++;
-        listado.add(this);
     }
 
     //getter & setter

@@ -20,7 +20,7 @@ public class Vehiculo {
      
      //constructor
 
-    public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, String traccion, Fabricante fabricante, int CantidadVehiculos) {
+    public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, String traccion, Fabricante fabricante) {
         this.placa = placa;
         this.puertas = puertas;
         this.velocidadMaxima = velocidadMaxima;
@@ -29,7 +29,7 @@ public class Vehiculo {
         this.peso = peso;
         this.traccion = traccion;
         this.fabricante = fabricante;
-        this.CantidadVehiculos = CantidadVehiculos;
+        CantidadVehiculos++;
         listado.add(this);
     }
 
@@ -98,7 +98,8 @@ public class Vehiculo {
     }
 
     public int getCantidadVehiculos() {
-        return CantidadVehiculos;
+        return listado.size();
+        //return CantidadVehiculos;
     }
 
     public void setCantidadVehiculos(int CantidadVehiculos) {

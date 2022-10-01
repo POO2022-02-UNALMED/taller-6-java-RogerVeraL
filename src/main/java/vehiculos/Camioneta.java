@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package vehiculos;
-import java.util.ArrayList;
 /**
  *
  * @author Roger Vera
@@ -11,14 +10,12 @@ import java.util.ArrayList;
 public class Camioneta extends Vehiculo{
     private boolean volco;
     private static int camionetas;
-    private static ArrayList<Camioneta> listado = new ArrayList<Camioneta>();
     
     //constructor
-    public Camioneta(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, String traccion, Fabricante fabricante, int CantidadVehiculos, boolean volco) {
-        super(placa, puertas, 90, nombre, precio, peso, "4X4", fabricante, CantidadVehiculos);
+    public Camioneta(String placa, int puertas, int velocidadMaxima, String nombre, int precio, int peso, String traccion, Fabricante fabricante, boolean volco) {
+        super(placa, puertas, 90, nombre, precio, peso, "4X4", fabricante);
         this.volco = volco;
         camionetas++;
-        listado.add(this);
     }
     
     //getter & setter
