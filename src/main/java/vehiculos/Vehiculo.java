@@ -16,7 +16,7 @@ public class Vehiculo {
     private double precio,peso;
     private String traccion;
     private Fabricante fabricante;
-    private int CantidadVehiculos; 
+    private static int CantidadVehiculos; 
     private static ArrayList<Vehiculo> listado = new ArrayList<Vehiculo>();
      
      //constructor
@@ -98,13 +98,13 @@ public class Vehiculo {
         this.fabricante = fabricante;
     }
 
-    public int getCantidadVehiculos() {
+    public static int getCantidadVehiculos() {
         return listado.size();
         //return CantidadVehiculos;
     }
 
-    public void setCantidadVehiculos(int CantidadVehiculos) {
-        this.CantidadVehiculos = CantidadVehiculos;
+    public static void setCantidadVehiculos(int CantidadVehiculos) {
+        Vehiculo.CantidadVehiculos = CantidadVehiculos;
     }
     
     public static String vehiculosPorTipo(){       
