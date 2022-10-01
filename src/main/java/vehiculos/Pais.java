@@ -27,5 +27,12 @@ public class Pais {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+    
+    //metodos
+    
+    public static Pais paisMasVendedor() {
+        Fabricante fabMVentas = Fabricante.fabricaMayorVentas();
+        return fabMVentas.getPais();
+    }
 
 }

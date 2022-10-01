@@ -4,6 +4,8 @@
  */
 package vehiculos;
 
+import java.util.ArrayList;
+import vehiculos.Vehiculo;
 
 /**
  *
@@ -12,12 +14,14 @@ package vehiculos;
 public class Fabricante {
     private String nombre;
     private Pais pais;
-    
+    private static ArrayList<Fabricante> listado = new ArrayList<>();
+    private int totalVentas;
     //constructor
 
     public Fabricante(String nombre, Pais pais) {
         this.nombre = nombre;
         this.pais = pais;
+        listado.add(this);
     }
     
     //getter & setter
@@ -36,6 +40,33 @@ public class Fabricante {
 
     public void setPais(Pais pais) {
         this.pais = pais;
+    }
+
+    public static ArrayList<Fabricante> getListado() {
+        return listado;
+    }
+
+
+    public int getTotalVentas() {
+        return totalVentas;
+    }
+
+    public void setTotalVentas(int totalVentas) {
+        this.totalVentas = totalVentas;
+    }
+    
+    
+    
+    
+    //metodos
+    public static Fabricante fabricaMayorVentas() {
+        Fabricante fabMventas = listado.get(0);
+        for (Fabricante v : listado) {
+            if (v.getTotalVentas() > fabMventas.getTotalVentas()) {
+		fabMventas = v;
+            }
+	}
+        return fabMventas;
     }
 
 }

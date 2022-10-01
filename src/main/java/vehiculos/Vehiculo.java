@@ -17,7 +17,7 @@ public class Vehiculo {
     private String traccion;
     private Fabricante fabricante;
     private static int CantidadVehiculos; 
-    private static ArrayList<Vehiculo> listado = new ArrayList<Vehiculo>();
+    //private static ArrayList<Vehiculo> listado = new ArrayList<Vehiculo>();
      
      //constructor
 
@@ -31,7 +31,8 @@ public class Vehiculo {
         this.traccion = traccion;
         this.fabricante = fabricante;
         CantidadVehiculos++;
-        listado.add(this);
+        //listado.add(this);
+        fabricante.setTotalVentas(fabricante.getTotalVentas()+1);
     }
 
     public String getPlaca() {
@@ -99,9 +100,10 @@ public class Vehiculo {
     }
 
     public static int getCantidadVehiculos() {
-        return listado.size();
-        //return CantidadVehiculos;
+        //return listado.size();
+        return CantidadVehiculos;
     }
+    
 
     public static void setCantidadVehiculos(int CantidadVehiculos) {
         Vehiculo.CantidadVehiculos = CantidadVehiculos;
@@ -114,10 +116,11 @@ public class Vehiculo {
         return cad;
     }
     
+    /*
     //metodos
     public static Fabricante fabricaMayorVentas() {
         Vehiculo fabMventas = listado.get(7);//no se que numero va en el get(?)
-        for (Vehiculo v : listado) {
+        for (Vehiculo  v : listado) {
             if ( v.getCantidadVehiculos() > fabMventas.getCantidadVehiculos()){
                 fabMventas = v;
             }
@@ -128,6 +131,7 @@ public class Vehiculo {
     public static Pais paisMasVendedor() {
 	Fabricante fmv = fabricaMayorVentas();
 	return fmv.getPais();
-	}       
+	}  
+    */
      
 }
